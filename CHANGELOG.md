@@ -15,6 +15,15 @@
 -
 -->
 
+## [0.1.1] - 2025-11-04
+### Added
+- `KNNRegressor` with `_predict` method using mean
+- `MSE` metric
+- `compare_knn_regressor` test
+
+### Changed
+- `euclidean_distance` is now in the new `utils` module, no more in `base_knn`
+
 ## [0.1.0] - 2025-11-04
 ### Added
 - `BaseKNN` abstract class with `fit`, `predict` and `score`

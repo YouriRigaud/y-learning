@@ -9,5 +9,5 @@ y-learning : my personal ML library from scratch
 To test the library, I compare my estimators with the state-of-art ML library scikit-learn.
 
 ## Next things to do
-- KNNRegressor
+- KNNClassifier string
 - OLS
