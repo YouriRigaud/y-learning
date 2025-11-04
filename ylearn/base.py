@@ -5,9 +5,9 @@
 
 from __future__ import annotations
 from abc import ABC, abstractmethod
-import numpy as np
 
 from .types import ArrayLike
+from metrics import r2_score
 
 class BaseEstimator(ABC):
     """
@@ -53,4 +53,5 @@ class BaseEstimator(ABC):
         Returns:
             score (float): The computed r2 score. 
         """
-        raise NotImplementedError
+        y_pred = self.predict(X)
+        return r2_score(y, y_pred)
