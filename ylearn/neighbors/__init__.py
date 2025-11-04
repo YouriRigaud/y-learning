@@ -5,3 +5,4 @@
 
 from ylearn.neighbors.base_knn import BaseKNN
 from ylearn.neighbors.knn_classification import KNNClassifier
+from ylearn.neighbors.knn_regression import KNNRegressor

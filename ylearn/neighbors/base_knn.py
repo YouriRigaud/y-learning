@@ -10,20 +10,7 @@ import numpy as np
 
 from ylearn.base import BaseEstimator
 from ylearn.types import ArrayLike
-
-def _euclidean_distance(x1: ArrayLike, x2: ArrayLike) -> float:
-    """
-    Compute the euclidean distance beetween x1 and x2.
-
-        Parameters:
-            x1 (ArrayLike): A (nb_features, ) shape ArrayLike representing a point.
-            x2 (ArrayLike): A (nb_features, ) shape ArrayLike representing a point.
-        
-        Returns:
-            distance (float): The euclidean distance of x1 and x2.
-    """
-    distance = np.sqrt(np.sum((x1-x2)**2))
-    return distance
+from ylearn.utils import euclidean_distance
 
 class BaseKNN(BaseEstimator, ABC):
     """
@@ -91,7 +78,7 @@ class BaseKNN(BaseEstimator, ABC):
             k_nearest_target (ArrayLike): A (k, ) shape ArrayLike representing the target values of the k nearest neighbors.
         """
         # compute the distances with all training points
-        distances = np.array([_euclidean_distance(x, x_train) for x_train in self._X_train])
+        distances = np.array([euclidean_distance(x, x_train) for x_train in self._X_train])
 
         # find the k nearest neighbors and their target values
         k_nearest_indices = np.argsort(distances)[:self.k]

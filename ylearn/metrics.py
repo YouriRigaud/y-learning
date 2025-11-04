@@ -37,3 +37,18 @@ def accuracy_score(y: ArrayLike, y_pred: ArrayLike) -> float:
     """
     accuracy_score = np.mean(y == y_pred)
     return accuracy_score
+
+def MSE(y: ArrayLike, y_pred: ArrayLike) -> float:
+    """
+    Compute the MSE (Mean Square Error).
+    Use for regression task.
+
+    Parameters:
+        y (ArrayLike): A (nb_samples, ) shape ArrayLike representing the true target values of the data.
+        y_pred (ArrayLike): A (nb_samples, ) shape ArrayLike representing the predicted target values of the data.
+
+    Returns:
+        MSE (float): The computed MSE.
+    """
+    MSE = np.mean((y - y_pred)** 2)
+    return MSE
