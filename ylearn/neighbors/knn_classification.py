@@ -33,7 +33,7 @@ class KNNClassifier(BaseKNN):
         counts = np.bincount(k_nearest_label.astype(int))
         return counts.argmax()
     
-    def score(self, X, y) -> float:
+    def score(self, X: ArrayLike, y: ArrayLike) -> float:
         """
         Score the model on the test data.
         It uses the accuracy score because of the classification task.

@@ -31,7 +31,7 @@ class KNNRegressor(BaseKNN):
         # return the mean of the target values
         return np.mean(k_nearest_target_values)
     
-    def score(self, X, y) -> float:
+    def score(self, X: ArrayLike, y: ArrayLike) -> float:
         """
         Score the model on the test data.
         It uses the r2 score because of the regression task.
