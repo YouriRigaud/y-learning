@@ -27,19 +27,19 @@ class BaseKNN(BaseEstimator, ABC):
         super().__init__()
         self.k = k
 
-    def fit(self, X: ArrayLike, y: ArrayLike) -> BaseKNN:
+    def fit(self, X_train: ArrayLike, y_train: ArrayLike) -> BaseKNN:
         """
         Train the KNN estimator on data X to fit target values y.
 
         Parameters:
-            X (ArrayLike): A (nb_samples, nb_features) shape ArrayLike representing the training data.
-            y (ArrayLike): A (nb_samples, ) shape ArrayLike representing the target values of the training data.
+            X_train (ArrayLike): A (nb_samples, nb_features) shape ArrayLike representing the training data.
+            y_train (ArrayLike): A (nb_samples, ) shape ArrayLike representing the target values of the training data.
         
         Returns:
             self (KNN): Self trained KNN estimator object.
         """
-        self._X_train = X
-        self._y_train = y
+        self._X_train = X_train
+        self._y_train = y_train
         return self
     
     def predict(self, X: ArrayLike) -> ArrayLike:
