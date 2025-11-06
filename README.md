@@ -9,5 +9,7 @@ y-learning : my personal ML library from scratch
 To test the library, I compare my estimators with the state-of-art ML library scikit-learn.
 
 ## Next things to do
-- KNNClassifier string
-- OLS
+- String labels classifier
+- Lasso, ElasticNet linear model
+- Gradient descent solver
+- Test base class for ease of use

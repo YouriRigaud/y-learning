@@ -30,6 +30,7 @@ class BaseLinearModel(BaseEstimator, ABC):
         self.coef_ = None
         self.intercept_ = 0.
     
+    @abstractmethod
     def fit(self, X_train: ArrayLike, y_train: ArrayLike) -> BaseLinearModel:
         """
         Train the linear model on data X to fit responses y.

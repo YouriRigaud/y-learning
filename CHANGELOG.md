@@ -15,6 +15,14 @@
 -
 -->
 
+## [0.1.2] - 2025-11-05
+### Added
+- `BaseLinearModel` abstract class with `fit`, `predict` and `score` for linear regression method
+- Solvers for the linear models (`normal`, `qr` and `qr_ridge`)
+- `SolverFactory` for ease of use of the solvers
+- `OLS` ordinary least square regression model
+- `Ridge` regression model
+
 ## [0.1.1] - 2025-11-04
 ### Added
 - `KNNRegressor` with `_predict` method using mean
