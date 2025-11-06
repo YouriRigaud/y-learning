@@ -4,6 +4,7 @@
 #License: MIT License
 
 from tests.knn_tests import compare_knn_classifier, compare_knn_regressor
+from tests.linear_model_tests import compare_ols
 
 def main():
     """
@@ -11,6 +12,7 @@ def main():
     """
     assert compare_knn_classifier(), "KNN classifier does not perform as well!"
     assert compare_knn_regressor(), "KNN regressor does not perform as well!"
+    assert compare_ols(), "OLS regressor does not perform as well!"
 
 if __name__ == "__main__":
     main()

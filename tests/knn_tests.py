@@ -19,6 +19,7 @@ def compare_knn_classifier() -> bool:
     Returns:
         bool: True if the metrics show that the ylearn model is as accurate than the sklearn one. 
     """
+    print("Test KNN classifier")
     # Load breast cancer dataset from sklearn (Classification)
     X, y = load_breast_cancer(return_X_y=True)
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
@@ -43,6 +44,7 @@ def compare_knn_regressor() -> bool:
     Returns:
         bool: True if the metrics show that the ylearn model is as accurate than the sklearn one. 
     """
+    print("Test KNN regressor")
     # Load diabetes dataset from sklearn (Regressor)
     X, y = load_diabetes(return_X_y=True)
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
