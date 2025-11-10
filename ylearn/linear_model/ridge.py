@@ -25,6 +25,8 @@ class Ridge(BaseLinearModel):
             fit_intercept (bool): True by default, fit the linear model with an intercept value stored in intercept_.
         """
         super().__init__(solver, fit_intercept)
+        if lmbd <= 0:
+            raise ValueError("Lambda value 'lmbd' must be strictly positive. Use OLS for the case lambda = 0.")
         self.lmbd = lmbd
 
     def fit(self, X_train: ArrayLike, y_train: ArrayLike) -> Ridge:
